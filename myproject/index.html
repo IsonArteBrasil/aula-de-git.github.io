@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Git aula 1</title>
+</head>
+<body>
+    <h1>Primeiros passos em Git.<h1>
+    <p>O símbolo $ indica que você deve usar o usuário comum para fazer essa operação.<br>
+        $ sudo apt install git<br>
+        O sudo é o comando que dá permissões de super usuário temporariamente;
+        assim é possível fazer a instalação de programas.<p>
+        
+        <p>O apt do inglês, Advanced Package Tool, em português, Ferramenta de Empacotamento Avançada;<br>
+            é a ferramenta que nos ajuda na instalação, atualização e desinstalação de programas, entre outras funções.</p>       
+        <p>O install é o comando de instalar, indicando ao apt o que fazer.</p>
+        
+        <p>Verifique se a instalação foi feita corretamente digitando:<br>
+        
+            $ git --version
+            Você receberá o retorno da versão instalada.
+            
+            Antes de começar a usá-lo é preciso fazer as configurações iniciais. Assim,<br>
+        
+        $ git config --global user.name seu_nome_aqui<br>
+            Insira seu nome no local marcado; seu_nome_aqui.<br>
+            
+            Em seguida:<br>
+            
+            $ git config --global user.email seu@email.com<br>
+            Insira seu email no local marcado; seu@email.com.<br>
+            
+            Configurando o editor padrão:<br>
+            
+            $ git config --global core.editor nano<br>
+            No meu caso, estou usando o nano.</p>
+        
+        <p>Para verificar as suas configurações:<br>
+        
+        $ git config --list<br>
+        
+        Caso queira que as configurações sejam feitas apenas no diretório (não global) indicado,<br>
+        basta retirar dos comandos a flag --global. Assim:<br>
+        
+        $ git config user.name seu_nome_aqui<br>
+        $ git config user.email seu@email.com,<br>
+        $ git config core.editor nano<br>
+        
+        <p>Para inicializar o git no diretório desejado (caso ainda não o tenha feito), <br>
+        vá até o local onde você deseja fazer o controle de versionamento.<br>
+        
+        $ cd /home/seu_usuário/seu_repositório<br>
+        
+        O comando cd serve para mudar de diretório/pasta; em seguida digite o caminho até a pasta.
+        e digite
+        $ git init </p>
+
+    </h1>
+</body>
+</html>
