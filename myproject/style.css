@@ -1,4 +1,8 @@
+:root{
+--gradient-color: linear-Gradient(#01060f, #3b1202);
+}
 body {
+    background-color: var(--gradient-color);
     height: 100%;
     min-height: 100vh; 
     margin: 0;
@@ -41,12 +45,18 @@ p{
 }
 
 .footer{
+    border-top: 1px solid #1a01fa;
+    color: #02573d;
+    font-size: small;
     padding: 10px 20px;
     width: 100%;
-    height: 3rem;  
+    height: 2rem;  
     left: 0;
     bottom: 0;
-    background-color: #c73d06;
+    background: var(--gradient-color);
     position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
-    
