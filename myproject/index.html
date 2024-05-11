@@ -1,65 +1,145 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="js/index.js"></script>
-    <title>Git aula 1</title>
-</head>
-<body>
-    <h1>Primeiros passos em Git e GitHub.<h1>
-        <div><img src="img/git.jpg" alt="Imagem git e GitHub" style="width: 50%; max-width: 960px; border-radius: 30px;"></div>
-    <p>O símbolo $ indica que você deve usar o usuário comum para fazer essa operação.<br>
-        $ sudo apt install git<br>
-        O sudo é o comando que dá permissões de super usuário temporariamente;
-        assim é possível fazer a instalação de programas.<p>
-        
-        <p>O apt do inglês, Advanced Package Tool, em português, Ferramenta de Empacotamento Avançada;<br>
-            é a ferramenta que nos ajuda na instalação, atualização e desinstalação de programas, entre outras funções.</p>       
-        <p>O install é o comando de instalar, indicando ao apt o que fazer.</p>
-        
-        <p>Verifique se a instalação foi feita corretamente digitando:<br>
-        
-            $ git --version
-            Você receberá o retorno da versão instalada.
-            
-            Antes de começar a usá-lo é preciso fazer as configurações iniciais. Assim,<br>
-        
-        $ git config --global user.name seu_nome_aqui<br>
-            Insira seu nome no local marcado; seu_nome_aqui.<br>
-            
-            Em seguida:<br>
-            
-            $ git config --global user.email seu@email.com<br>
-            Insira seu email no local marcado; seu@email.com.<br>
-            
-            Configurando o editor padrão:<br>
-            
-            $ git config --global core.editor nano<br>
-            No meu caso, estou usando o nano.</p>
-        
-        <p>Para verificar as suas configurações:<br>
-        
-        $ git config --list<br>
-        
-        Caso queira que as configurações sejam feitas apenas no diretório (não global) indicado,<br>
-        basta retirar dos comandos a flag --global. Assim:<br>
-        
-        $ git config user.name seu_nome_aqui<br>
-        $ git config user.email seu@email.com,<br>
-        $ git config core.editor nano<br>
-        
-        <p>Para inicializar o git no diretório desejado (caso ainda não o tenha feito), <br>
-        vá até o local onde você deseja fazer o controle de versionamento.<br>
-        
-        $ cd /home/seu_usuário/seu_repositório<br>
-        
-        O comando cd serve para mudar de diretório/pasta; em seguida digite o caminho até a pasta.
-        e digite
-        $ git init </p>
-        <p>Uma nova linha em meu arquivo.</p>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script src="js/index.js"></script>
+        <title>Git aula 1</title>
+    </head>
 
-    </h1>
-</body>
+    <body>
+        <main>                  
+            <h1>Primeiros passos em Git e GitHub</h1>          
+            <div>
+                <img class="imagem" src="img/git.jpg" alt="Imagem git e GitHub centralizada" style="border-radius: 30px;">
+            </div>            
+                <p>O símbolo $ indica que você deve usar o usuário comum para fazer essa operação.<br>
+                    $ sudo apt install git<br>
+                    O sudo é o comando que dá permissões de super usuário temporariamente;
+                    assim é possível fazer a instalação de programas.<p>
+                
+                <p>O apt do inglês, Advanced Package Tool, em português, Ferramenta de Empacotamento Avançada;<br>
+                    é a ferramenta que nos ajuda na instalação, atualização e desinstalação de programas, entre outras funções.</p>       
+                <p>O install é o comando de instalar, indicando ao apt o que fazer.</p>
+                
+                <p>Verifique se a instalação foi feita corretamente digitando:<br>
+            
+                    $ git --version
+                    Você receberá o retorno da versão instalada.
+                    
+                    Antes de começar a usá-lo é preciso fazer as configurações iniciais. Assim,<br>
+                
+                    $ git config --global user.name seu_nome_aqui<br>
+                    Insira seu nome no local marcado; seu_nome_aqui.<br>
+                    
+                    Em seguida:<br>
+                    
+                    $ git config --global user.email seu@email.com<br>
+                    Insira seu email no local marcado; seu@email.com.<br>
+                    
+                    Configurando o editor padrão:<br>
+                    
+                    $ git config --global core.editor nano<br>
+                    No meu caso, estou usando o nano.</p>
+            
+                <p>Para verificar as suas configurações:<br>
+            
+                    $ git config --list<br>
+                    
+                    Caso queira que as configurações sejam feitas apenas no diretório (não global) indicado,<br>
+                    basta retirar dos comandos a flag --global. Assim:<br>
+                    
+                    $ git config user.name seu_nome_aqui<br>
+                    $ git config user.email seu@email.com,<br>
+                    $ git config core.editor nano<br>
+                
+                <p>Para inicializar o git no diretório desejado (caso ainda não o tenha feito), <br>
+                    vá até o local onde você deseja fazer o controle de versionamento.<br>
+                    
+                    $ cd /home/seu_usuário/seu_repositório<br>
+                    
+                    O comando cd serve para mudar de diretório/pasta; em seguida digite o caminho até a pasta.
+                    e digite
+                    $ git init</p>
+            </div> 
+            <h2>Git adicionando novos arquivos</h2>
+                <p>Você acabou de criar seu primeiro repositório Git local. Mas está vazio.
+                
+                    Então, vamos adicionar alguns arquivos, ou criar um novo arquivo usando seu editor de texto favorito. Em seguida, salve-o ou mova-o para a pasta que você acabou de criar.
+                    
+                    Se você quiser aprender a criar um novo arquivo usando um editor de texto, você pode visitar nosso tutorial HTML:</h2>
+                    ls will list the files in the directory. We can see that index.html is there.</p>
+
+                <p>ls listará os arquivos em o diretório. Podemos ver que está lá.index.html</p>
+                <p>ls
+                    index.html</p>
+                <p>git status<br>
+                    On branch master<br>
+                    
+                    No commits yet<br>
+                    
+                    Untracked files:<br>
+                    (use "git add ..." to include in what will be committed)<br>
+                        index.html<br>
+                    
+                    nothing added to commit but untracked files present (use "git add" to track)</p>
+            <h2>Ambiente de preparo do Git</h2>
+                <p>Uma das principais funções do Git são os conceitos de Ambiente de Preparação e Commit.<br>
+                
+                    Como você está trabalhando, você pode estar adicionando, editando e removendo arquivos.<br>Mas Sempre que você atingir um marco ou terminar uma parte do trabalho, você deve adicionar o para um ambiente de preparo.<br>
+                    
+                    Arquivos em etapas são arquivos que estão prontos para serem confirmados com o repositório no qual você está trabalhando</h2>    
+            
+                <p>Assim, podemos adicionr index.html ao ambiente de preparo.<br>
+
+                    Exemplo:<br>
+                    git add index.html</p>
+
+                <p>Vamos criar também um arquivo README.md que descreve o repositório (recomendado para todos repositórios)</p>
+                <p>Exemplo:<br>
+                    # hello-world<br>
+                    Hello World repository for Git tutorial<br>
+                    This is an example repository for the Git tutoial on https://www.w3schools.com<br>
+                
+                    This repository is built step by step in the tutorial.</p>
+                <p>Vamos criar também uma folha de estilos externa básica chamada style.css</p>
+                <p>E atualize para incluir a folha de estilo:index.html</p>
+                <p>Agora adicione todos os arquivos no diretório atual ao ambiente de preparo:<br>
+
+                    Exemplo:<br>
+                    git add --all</p>
+                <p>Agora todos os 3 arquivos são adicionados ao ambiente de preparo, e estamos prontos para fazer nosso primeiro.commit.<br>
+
+                    Nota: O comando abreviado para é <b>add --all git add -A</b></p>
+            <h2>Confirmação do Git</h2>
+                <p>Agora estamos prontos para passar nosso repositório de stage para commit</p>
+        
+                <p>Devemos adicionar mensagens claras a cada commit, é fácil para si mesmo (e para os outros) para ver o que mudou e quando.<br>
+
+                    Exemplo:<br>
+                    git commit -m "First release of Hello World!"</p>
+            <h2>Git Commit sem estágio</h2>
+                <p>Às vezes, quando você faz pequenas alterações, usar o ambiente de preparação parece uma perda de tempo.<br> É possível confirmar alterações diretamente, ignorando o ambiente de preparo.<br> A opção irá automaticamente organizar cada arquivo alterado, já rastreado.-a</p>
+                <p>Ao fazer a mudança no repositório, verificamos o status do nosso repositório. Mas, desta vez, usaremos a opção <b>--short</b>para ver as mudanças de uma forma mais compacta:<br>
+
+                    Exemplo:<br>
+                    git status --short<br>
+                    M index.html<br><br>
+
+                <b>Nota:</b> Os sinalizadores de status curtos são:<br>
+                
+                    ?? - Arquivos não rastreados<br>
+                    A - Arquivos adicionados ao palco<br>
+                    M - Arquivos modificados<br>
+                    D - Arquivos excluídos</p>
+                <h3>Mapa de instruções para fazer um fork e clonar um repositório remoto.</h>
+            
+                <img class="imagem" src="img/githubFork_clone.png" alt="Imagem mapa para fork e clonar centralizada">
+            
+            <footer>
+                <div class="footer"></div>
+            </footer>
+        </main>
+    </body>
 </html>
