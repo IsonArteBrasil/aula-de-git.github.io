@@ -1,21 +1,38 @@
 :root{
---gradient-color: linear-Gradient(#01060f, #3b1202);
+--gradient-color: linear-gradient(#01060f, #3b1202);
+--gradient-color1: linear-gradient( to right, #012130, #075a12, #012130);
 }
 body {
-    background-color: var(--gradient-color);
+    background:#000000;       
+  
     height: 100%;
     min-height: 100vh; 
     margin: 0;
     padding: 0;
-    box-sizing: border-box;        
-    background-color: #000000;
+    box-sizing: border-box; 
+    
     display: flex;
     justify-content: center;
     align-items: center;
     
 }
+
+header{
+    display: flex;
+    flex-direction:column;
+    text-align: center;
+    align-items: center;
+    top: 0;
+    width: 100%;
+    height: 5rem;
+    position: fixed;
+    background: var(--gradient-color);
+    border-bottom: 1px solid #1a01fa;
+    color: #1a01fa;
+    font-size: larger;
+}
 main{ 
-   
+    background:#000000;   
     padding: 20px;
     height: 100%;    
     width: 80%;
@@ -23,14 +40,14 @@ main{
     flex-direction: column; 
     text-align: center;
     text-align: center;
-    color: floralwhite;  
+    color: #ffffff;  
     font-size: 18px;
     font-family: Arial, Helvetica, sans-serif;     
       
 }
-h1, h2, h3{
+h2, h3{
     text-align: center;
-    margin-top: 5rem;
+    margin-top: 15rem;
     margin-bottom: 10px;
     color: #14648a;
 }
